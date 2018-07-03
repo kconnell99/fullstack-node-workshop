@@ -32,6 +32,27 @@ app.get("/compliment", function(req, res) {
     .end();
 });
 
+const insults = ["you suck.", 
+"you're the worst.",
+"failure.",
+"you'll never succeed in life",
+"you dumb af"];
+
+function getRandomInsult(){
+    const randomIndex = Math.floor(Math.random() * insults.length);
+    return insults[randomIndex];
+}
+
+app.get("/insult",function(req,res){
+    res
+        .json({
+            insult: getRandomInsult()
+        })
+    .end();
+})
+
+
+
 app.use("/public", express.static("./public"));
 
 app.listen(3000);
