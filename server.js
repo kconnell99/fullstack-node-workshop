@@ -36,7 +36,11 @@ const insults = ["you suck.",
 "you're the worst.",
 "failure.",
 "you'll never succeed in life",
-"you dumb af"];
+"you dumb af",
+"try harder loser",
+"no one likes you",
+"you don't even go here",
+"u trash"];
 
 function getRandomInsult(){
     const randomIndex = Math.floor(Math.random() * insults.length);
